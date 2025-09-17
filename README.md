@@ -72,20 +72,7 @@ If you only need a 1‑D compensation (e.g. a single probe row across width), co
 
 ## Configuration Examples
 
-### 1. Standard (Upstream-Compatible)
-
-```ini
-[bed_mesh]
-mesh_min: 0, 0
-mesh_max: 250, 220
-probe_count: 5,5
-apply_to_axis: Z
-algorithm: bicubic
-fade_start: 1
-fade_end: 10
-```
-
-### 2. Belt / Infinite-Z (Apply to Y)
+### 1. Belt / Infinite-Z (Apply to Y)
 
 ```ini
 [bed_mesh]
@@ -100,7 +87,7 @@ fade_start: 9999      # disables fade effectively
 fade_end: 10000
 ```
 
-### 3. Apply to Y but Fade by (True) Z
+### 2. Apply to Y but Fade by (True) Z
 
 If your G-code “Z” is virtual belt advance but you want fading relative to vertical build height (rare):
 
@@ -314,4 +301,3 @@ BED_MESH_OUTPUT
 
 ---
 
-If you’d like a **unified diff** instead of a full replacement file, or a version with a `compensation_sign` parameter, just open an issue or ask. Enjoy dialed-in belt compensation!
